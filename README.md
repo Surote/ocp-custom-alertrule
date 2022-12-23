@@ -1,9 +1,9 @@
-# TCRB custom alert rule
+# LAB custom alert rule
 
 Created: December 23, 2022 11:46 PM
 Last Edited Time: December 23, 2022 11:58 PM
-Type: TCRB
-tag: tcrb
+Type: LAB
+tag: lab
 
 ### custom prometheus alertrule
 
@@ -18,7 +18,7 @@ metadata:
   namespace: openshift-monitoring
 spec:
   groups:
-  - name: userdefine
+  - name: lab-custom-alert
     rules:
     - alert: HighMemOverallMasterOver70
       labels:
@@ -30,10 +30,10 @@ spec:
 oc apply -f custom-highmem.yaml
 ```
 
-![Untitled](TCRB%20custom%20alert%20rule%209d9bec006d52495199cefd2da0825296/Untitled.png)
+![Untitled](LAB%20custom%20alert%20rule%209d9bec006d52495199cefd2da0825296/Untitled.png)
 
 ### **Silence default alert**
 
-![Untitled](TCRB%20custom%20alert%20rule%209d9bec006d52495199cefd2da0825296/Untitled%201.png)
+![Untitled](LAB%20custom%20alert%20rule%209d9bec006d52495199cefd2da0825296/Untitled%201.png)
 
-![Untitled](TCRB%20custom%20alert%20rule%209d9bec006d52495199cefd2da0825296/Untitled%202.png)
+![Untitled](LAB%20custom%20alert%20rule%209d9bec006d52495199cefd2da0825296/Untitled%202.png)
